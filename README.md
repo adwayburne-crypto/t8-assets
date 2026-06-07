@@ -10,4 +10,4 @@ from the live Shopify store (www.t8fitness.com). See `align-pilates/README.txt`.
 - `02_accessories/` — attachments & parts
 - `MANIFEST.csv` — product → file → live URL
 
-**One-click download:** [`t8-align-images.zip`](../../raw/main/t8-align-images.zip)
+**One-click download:** [`t8-align-images.zip`](../../raw/master/t8-align-images.zip)
