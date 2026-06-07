@@ -1,0 +1,53 @@
+/* ============================================================
+   T8 FITNESS — BASE / RESET
+   Light global defaults. Scoped to be safe in consuming pages.
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body.t8, .t8-root {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--text-primary);
+  background: var(--bg-page);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.t8-root h1, .t8-root h2, .t8-root h3, .t8-root h4 {
+  font-family: var(--font-display);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  margin: 0;
+  color: var(--text-primary);
+  text-wrap: balance;
+}
+
+.t8-root p { margin: 0; text-wrap: pretty; }
+
+.t8-root a {
+  color: var(--text-link);
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease-standard);
+}
+.t8-root a:hover { color: var(--blue-800); }
+
+.t8-root :focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus);
+  border-radius: var(--radius-sm);
+}
+
+/* container helper */
+.t8-container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+}
+
+/* eyebrow + divider helpers reused across kit */
+.t8-rule { height: 1px; background: var(--border-default); border: 0; }

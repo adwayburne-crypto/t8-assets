@@ -1,0 +1,25 @@
+<!-- @dsCard group="Spacing" viewport="700x160" name="Radii" subtitle="Restrained, engineered corner radii." -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; font-family: var(--font-sans); background: var(--bg-surface); padding: 24px; }
+  .row { display:flex; gap:18px; align-items:flex-end; }
+  .item { display:flex; flex-direction:column; align-items:center; gap:8px; }
+  .box { width:72px; height:56px; background: var(--blue-50); border:1.5px solid var(--blue-700); }
+  .item span { font-family: var(--font-mono); font-size:10px; color: var(--text-muted); }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="item"><div class="box" style="border-radius:var(--radius-xs)"></div><span>xs·3</span></div>
+    <div class="item"><div class="box" style="border-radius:var(--radius-sm)"></div><span>sm·6</span></div>
+    <div class="item"><div class="box" style="border-radius:var(--radius-md)"></div><span>md·10</span></div>
+    <div class="item"><div class="box" style="border-radius:var(--radius-lg)"></div><span>lg·16</span></div>
+    <div class="item"><div class="box" style="border-radius:var(--radius-xl)"></div><span>xl·24</span></div>
+    <div class="item"><div class="box" style="border-radius:var(--radius-pill)"></div><span>pill</span></div>
+  </div>
+</body>
+</html>

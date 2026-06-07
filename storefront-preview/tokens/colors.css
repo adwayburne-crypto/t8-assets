@@ -1,0 +1,104 @@
+/* ============================================================
+   T8 FITNESS — COLOR TOKENS
+   Anchored on the heritage T8 blue, evolved into a precise,
+   confident scale. Warm "Signal" coral carries action & energy.
+   Neutrals are a cool slate; surfaces lean a warm sand.
+   ============================================================ */
+
+:root {
+  /* ---- Brand blue (T8 Blue) — primary identity --------------- */
+  --blue-50:  #f0f6fc;
+  --blue-100: #e0edf9;
+  --blue-200: #bdd8f1;
+  --blue-300: #8bbbe7;
+  --blue-400: #5097da;
+  --blue-500: #2377c7;
+  --blue-600: #1761a8;
+  --blue-700: #134f8a;   /* ← core brand blue (matches the T8 mark) */
+  --blue-800: #103f6e;
+  --blue-900: #0c2f53;
+  --blue-950: #071f3a;
+
+  /* ---- Signal coral — action, energy, sale/CTA --------------- */
+  --coral-50:  #fff3ef;
+  --coral-100: #ffe6dd;
+  --coral-200: #fdcdbd;
+  --coral-300: #fba88f;
+  --coral-400: #f87c5b;
+  --coral-500: #f15a36;  /* ← core accent (refined from heritage CTA) */
+  --coral-600: #df4a27;
+  --coral-700: #bb3a1d;
+  --coral-800: #93301c;
+  --coral-900: #762a1b;
+
+  /* ---- Ink / slate neutrals ---------------------------------- */
+  --ink-50:  #f5f8fa;
+  --ink-100: #eaeff3;
+  --ink-200: #d8e0e7;
+  --ink-300: #b7c3cd;
+  --ink-400: #8d9dab;
+  --ink-500: #687a89;
+  --ink-600: #4c5d6b;
+  --ink-700: #38454f;
+  --ink-800: #25303a;
+  --ink-900: #151f27;
+  --ink-950: #0c141a;
+
+  /* ---- Warm sand surfaces (pulled from the storefront band) --- */
+  --sand-50:  #faf7f1;
+  --sand-100: #f3ede2;
+  --sand-200: #e8dfcf;
+  --sand-300: #d8cbb3;
+
+  --white: #ffffff;
+  --black: #0c141a;
+
+  /* ---- Semantic / status ------------------------------------- */
+  --green-100: #d8f0e2;
+  --green-500: #2f9460;
+  --green-700: #1f6b44;
+  --amber-100: #fbeccc;
+  --amber-500: #df9b2c;
+  --amber-700: #a06d12;
+  --red-100:   #fbdcdc;
+  --red-500:   #d83b3b;
+  --red-700:   #9f2727;
+
+  /* ============================================================
+     SEMANTIC ALIASES — reference these in product code
+     ============================================================ */
+
+  /* surfaces & backgrounds */
+  --bg-page:       var(--sand-50);
+  --bg-surface:    var(--white);
+  --bg-elevated:   var(--white);
+  --bg-panel:      var(--sand-100);
+  --bg-subtle:     var(--ink-50);
+  --bg-inverse:    var(--blue-950);
+  --bg-brand:      var(--blue-700);
+  --bg-brand-soft: var(--blue-50);
+  --bg-accent:     var(--coral-500);
+  --bg-accent-soft:var(--coral-50);
+
+  /* text */
+  --text-primary:   var(--ink-900);
+  --text-secondary: var(--ink-600);
+  --text-muted:     var(--ink-500);
+  --text-disabled:  var(--ink-400);
+  --text-on-brand:  var(--white);
+  --text-on-accent: var(--white);
+  --text-brand:     var(--blue-700);
+  --text-accent:    var(--coral-600);
+  --text-link:      var(--blue-600);
+
+  /* borders & lines */
+  --border-subtle:  var(--ink-100);
+  --border-default: var(--ink-200);
+  --border-strong:  var(--ink-300);
+  --border-brand:   var(--blue-700);
+  --border-inverse: rgba(255,255,255,0.16);
+
+  /* interaction */
+  --focus-ring:     var(--blue-500);
+  --overlay-scrim:  rgba(12, 20, 26, 0.55);
+}

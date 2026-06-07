@@ -1,0 +1,8 @@
+/* T8 Fitness — Webfonts
+   Refreshed type system (Google Fonts).
+   NOTE: Substitutions for the original brand. See readme.md > VISUAL FOUNDATIONS.
+   - Display:  Archivo (athletic grotesque; expanded-capable, replaces the custom italic logo face)
+   - Body/UI:  Hanken Grotesk (warm, legible humanist sans)
+   - Mono:     Space Mono (technical specs, eyebrows, measurements) */
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400..800;1,400..800&family=Hanken+Grotesk:ital,wght@0,300..800;1,300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');

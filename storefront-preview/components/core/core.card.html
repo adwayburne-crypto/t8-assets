@@ -1,0 +1,84 @@
+<!-- @dsCard group="Components" viewport="700x520" name="Core — Buttons, Badges, Tags" subtitle="Actions, icon buttons, status badges & filter chips." -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin:0; font-family: var(--font-sans); background: var(--bg-surface); padding: 28px; color: var(--text-primary); }
+  .sect { margin-bottom: 26px; }
+  .lbl { font-family: var(--font-mono); font-size: 10px; letter-spacing:.14em; text-transform:uppercase; color: var(--text-muted); margin-bottom: 12px; }
+  .row { display:flex; flex-wrap:wrap; gap:12px; align-items:center; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<script type="text/babel">
+const { Button, IconButton, Badge, Tag } = window.T8FitnessDesignSystem_ce2827;
+const Ico = ({n, s=18}) => { const r = React.useRef(null);
+  React.useEffect(()=>{ if(r.current){ r.current.innerHTML=''; const el=document.createElement('i'); el.setAttribute('data-lucide',n); r.current.appendChild(el); window.lucide.createIcons({attrs:{width:s,height:s}}); } });
+  return <span ref={r} style={{display:'inline-flex'}} />; };
+
+function Demo(){
+  const [filters,setFilters] = React.useState({Reformers:true, Cadillac:false, Chairs:false});
+  return (
+    <div className="t8-root">
+      <div className="sect">
+        <div className="lbl">Buttons — variants</div>
+        <div className="row">
+          <Button variant="primary">Shop now</Button>
+          <Button variant="accent" iconRight={<Ico n="arrow-right"/>}>Add to cart</Button>
+          <Button variant="secondary">View details</Button>
+          <Button variant="ghost">Compare</Button>
+          <Button variant="primary" disabled>Sold out</Button>
+        </div>
+      </div>
+      <div className="sect">
+        <div className="lbl">Buttons — sizes</div>
+        <div className="row">
+          <Button size="sm">Small</Button>
+          <Button size="md">Medium</Button>
+          <Button size="lg" iconLeft={<Ico n="shopping-cart"/>}>Large</Button>
+        </div>
+      </div>
+      <div className="sect">
+        <div className="lbl">Icon buttons</div>
+        <div className="row">
+          <IconButton label="Search" variant="ghost"><Ico n="search" s={20}/></IconButton>
+          <IconButton label="Account" variant="soft"><Ico n="user" s={20}/></IconButton>
+          <IconButton label="Cart" variant="outline"><Ico n="shopping-bag" s={20}/></IconButton>
+          <IconButton label="Wishlist" variant="brand" shape="round"><Ico n="heart" s={20}/></IconButton>
+          <IconButton label="Add" variant="accent" shape="round"><Ico n="plus" s={20}/></IconButton>
+        </div>
+      </div>
+      <div className="sect">
+        <div className="lbl">Badges</div>
+        <div className="row">
+          <Badge tone="accent" variant="solid">Sale −20%</Badge>
+          <Badge tone="brand">New</Badge>
+          <Badge tone="success" variant="solid">In stock</Badge>
+          <Badge tone="warning">Low stock</Badge>
+          <Badge tone="neutral">Pre-order</Badge>
+        </div>
+      </div>
+      <div className="sect" style={{marginBottom:0}}>
+        <div className="lbl">Filter tags</div>
+        <div className="row">
+          {Object.keys(filters).map(k=>(
+            <Tag key={k} selected={filters[k]} onClick={()=>setFilters(f=>({...f,[k]:!f[k]}))}>{k}</Tag>
+          ))}
+          <Tag onRemove={()=>{}}>Under HK$10,000</Tag>
+        </div>
+      </div>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script>
+</body>
+</html>

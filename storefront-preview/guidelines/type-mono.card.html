@@ -1,0 +1,27 @@
+<!-- @dsCard group="Type" viewport="700x200" name="Mono — Space Mono" subtitle="Eyebrows, specs, measurements & technical labels." -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; font-family: var(--font-mono); background: var(--bg-surface); padding: 24px; color: var(--text-primary); }
+  .eye { font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:var(--coral-600); }
+  .specs { margin-top:16px; display:grid; grid-template-columns:1fr 1fr; gap:6px 32px; max-width:520px; }
+  .specs div { display:flex; justify-content:space-between; font-size:13px; border-bottom:1px dashed var(--border-default); padding-bottom:5px; }
+  .specs span:first-child { color: var(--text-muted); }
+  .specs span:last-child { font-weight:700; font-variant-numeric: tabular-nums; }
+</style>
+</head>
+<body>
+  <div class="eye">Apparatus Spec · 008</div>
+  <div class="specs">
+    <div><span>Length</span><span>243 cm</span></div>
+    <div><span>Carriage</span><span>4 springs</span></div>
+    <div><span>Width</span><span>68 cm</span></div>
+    <div><span>Max load</span><span>150 kg</span></div>
+    <div><span>Weight</span><span>62 kg</span></div>
+    <div><span>Warranty</span><span>5 yr</span></div>
+  </div>
+</body>
+</html>

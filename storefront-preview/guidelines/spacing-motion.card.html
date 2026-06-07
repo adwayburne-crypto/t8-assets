@@ -1,0 +1,24 @@
+<!-- @dsCard group="Spacing" viewport="700x170" name="Motion" subtitle="Confident, no bounce. Hover the bars to preview easing." -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; font-family: var(--font-sans); background: var(--bg-surface); padding: 24px; }
+  .track { background: var(--ink-50); border-radius: var(--radius-pill); height:28px; position:relative; margin-bottom:12px; overflow:hidden; }
+  .dot { position:absolute; top:4px; left:4px; width:20px; height:20px; border-radius:50%; background: var(--coral-500); }
+  .standard .dot { animation: slide 1.8s var(--ease-standard) infinite alternate; }
+  .out .dot { animation: slide 1.8s var(--ease-out) infinite alternate; }
+  @keyframes slide { to { left: calc(100% - 24px); } }
+  .lbl { display:flex; justify-content:space-between; font-family: var(--font-mono); font-size:10px; color: var(--text-muted); }
+  @media (prefers-reduced-motion: reduce){ .dot{ animation:none; } }
+</style>
+</head>
+<body>
+  <div class="lbl"><span>ease-standard</span><span>200ms · cubic-bezier(.2,0,0,1)</span></div>
+  <div class="track standard"><div class="dot"></div></div>
+  <div class="lbl"><span>ease-out</span><span>320ms · cubic-bezier(.16,1,.3,1)</span></div>
+  <div class="track out"><div class="dot"></div></div>
+</body>
+</html>

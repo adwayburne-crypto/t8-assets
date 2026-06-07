@@ -1,0 +1,31 @@
+<!-- @dsCard group="Colors" viewport="700x180" name="Surfaces & Semantic" subtitle="Warm sand surfaces + status colors." -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; font-family: var(--font-sans); background: var(--bg-surface); padding: 20px; }
+  .grid { display:grid; grid-template-columns: repeat(4,1fr); gap:10px; }
+  .tile { height:60px; border-radius: var(--radius-sm); display:flex; align-items:flex-end; padding:8px;
+          font-family: var(--font-mono); font-size:10px; box-shadow: var(--shadow-xs); }
+  .lbl { display:block; margin-top:14px; font-family:var(--font-mono); font-size:9px; color:var(--text-muted); letter-spacing:.1em; text-transform:uppercase; }
+</style>
+</head>
+<body>
+  <span class="lbl" style="margin-top:0">Surfaces</span>
+  <div class="grid">
+    <div class="tile" style="background:var(--sand-50);box-shadow:inset 0 0 0 1px var(--ink-100);color:var(--ink-700)">sand-50</div>
+    <div class="tile" style="background:var(--sand-100);color:var(--ink-700)">sand-100</div>
+    <div class="tile" style="background:var(--sand-200);color:var(--ink-700)">sand-200</div>
+    <div class="tile" style="background:var(--blue-950);color:#fff">inverse</div>
+  </div>
+  <span class="lbl">Status</span>
+  <div class="grid">
+    <div class="tile" style="background:var(--green-500);color:#fff">success</div>
+    <div class="tile" style="background:var(--amber-500);color:#fff">warning</div>
+    <div class="tile" style="background:var(--red-500);color:#fff">danger</div>
+    <div class="tile" style="background:var(--blue-600);color:#fff">info</div>
+  </div>
+</body>
+</html>
